@@ -3,4 +3,5 @@
 node_modules
 __pycache__/
 CLAUDE.md
-ROADMAP.md 
+ROADMAP.md
+GIT-WORKFLOW.md
