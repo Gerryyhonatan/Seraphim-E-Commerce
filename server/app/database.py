@@ -23,3 +23,8 @@ async def lifespan_db():
         if db_pool:
             print("Menutup Database Connection Pool...")
             await db_pool.close()
+
+def get_pool():
+    if db_pool is None:
+        raise RuntimeError("Pool belum dibuat. Panggil lifespan_db() dulu saat startup.")
+    return db_pool
