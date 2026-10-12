@@ -1,3 +1,5 @@
+import { CardImage } from "@/components/ProductCard"
+
 async function getProducts() {
   const res = await fetch('http://localhost:5005/products')
   if (!res.ok) {
@@ -12,10 +14,7 @@ export default async function Home() {
   return (
     <div>
       {items.map((item: any) => (
-        <div key={item.product_id}>
-          <p>Name {item.product_name}</p>
-          <p>Price {item.product_price}</p>
-        </div>
+        <CardImage product={item} key={item.product_id}></CardImage>
       ))}
     </div>
   )
